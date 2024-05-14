@@ -3,9 +3,9 @@ import pickle
 
 n_tx=8
 pos_BS = np.asarray([0, -32])
-MC_reps=30
+MC_reps=1
 kappa=1.
-for ls in [10.]:
+for ls in [10.,25.,50.]:
     for seed in np.arange(0,MC_reps):
         with open('Results/ResultsSEED'+str(seed)+'kmax'+str(kappa)+'_ls_'+str(ls)+'.pkl', 'rb') as f:
             loaded_dict = pickle.load(f)

@@ -146,9 +146,9 @@ def generate_ray_tracing_data(positions):
 
 
 AlPHAS = np.hstack([0.025,np.linspace(0.05, 0.5, 10)])
-MC_reps=1  #Number of Monte Carlo runs
+MC_reps=30  #Number of Monte Carlo runs
 kappa=1. #RBF kernel magnitude
-for length_scale in [25.]:  #RBF kernel length scale
+for length_scale in [10.]:  #RBF kernel length scale
     for seed in np.arange(0,MC_reps):
         np.random.seed(seed)
         torch.manual_seed(seed)
